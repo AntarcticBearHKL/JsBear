@@ -1,12 +1,8 @@
 var Bear = {
     Init : function(){
         Test.On()
-        UtilityTools.DeviceInit()
+        SysFunctions.DeviceInit()
     }
-}
-
-var ID = function(NodeName){
-    return document.getElementById(NodeName)
 }
 
 var ContentManager = {
@@ -38,14 +34,24 @@ var ContentManager = {
         Child.parentNode.removeChild(Child)
     },
 }
-
 var cm = ContentManager
+
 
 var BehaviorManager = {
     
 }
+var bm = BehaviorManager
 
-var UtilityTools = {
+
+var UtilityFunctions = {
+    ID : function(NodeName){
+        return document.getElementById(NodeName)
+    }
+}
+var uf = UtilityFunctions
+
+
+var SysFunctions = {
     AppendCSS : function(path){
         if(!path || path.length === 0){
             console.log('Add Style File Error: File Does Not Exist!')
@@ -107,6 +113,8 @@ var UtilityTools = {
         return scroll_top; 
     },
 }
+var sf = SysFunctions
+
 
 var Test = {
     On : function(){
@@ -117,6 +125,8 @@ var Test = {
 
     }
 }
+var t = Test
+
 
 var BearPara = {
     MouseX              : -1,
@@ -136,7 +146,6 @@ var BearPara = {
     ClientDesktop       : 0,
     ClientMobile        : 0,
 }
-
 var bp = BearPara
 
 Bear.Init()
