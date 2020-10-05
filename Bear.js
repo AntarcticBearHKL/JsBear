@@ -46,6 +46,11 @@ var bm = BehaviorManager
 var UtilityFunctions = {
     ID : function(NodeName){
         return document.getElementById(NodeName)
+    },
+    ForEach: function(ParaList, Func){
+        for(var Counter=0; Counter<ParaList.length; Counter++){
+            Func(ParaList[Counter])
+        }
     }
 }
 var uf = UtilityFunctions
